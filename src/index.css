@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  @apply font-outfit text-secondary bg-accent text-base;
+}
+
+header {
+  min-height: 80px;
+}
+
+.full-screen-center {
+  min-height: calc(100vh - 80px);
+  @apply flex justify-center;
+}
+
+.option-btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.option-btn::before {
+  content: '';
+  width: 24px;
+  height: 24px;
+  margin-right: 16px;
+  border-radius: 100%;
+  border: 2px solid #C2C2C2;
+}
+
+.option-btn.active::before {
+  border-color: #B92B5D;
+  background: #B92B5D url('/public/images/check-icon.svg') no-repeat;
+  background-position: center center;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
